@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 6
-Title "MPPT 2420 HC"
+Title "MPPT 4820 HC"
 Date "2021-01-06"
 Rev "0.2.3"
 Comp "Copyright © 2020 Libre Solar Technologies GmbH"
