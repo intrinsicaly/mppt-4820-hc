@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
-Title "MPPT 2420 HC"
-Date "2021-05-03"
-Rev "0.2.3"
+Title "MPPT 4820 HC"
+Date "2026-02-20"
+Rev "1.0.0"
 Comp "Copyright © 2020 Libre Solar Technologies GmbH"
 Comment1 "Licensed under CERN-OHL-W version 2"
 Comment2 "Author: Martin Jäger"
@@ -72,11 +72,11 @@ P 8150 2500
 AR Path="/58ACD441" Ref="L1"  Part="1" 
 AR Path="/58A68DC9/58ACD441" Ref="L1"  Part="1" 
 F 0 "L1" V 8250 2500 50  0000 C CNN
-F 1 "53µH" V 8075 2500 50  0000 C CNN
-F 2 "LibreSolar:Inductor_Toroid_D32.8mm_4mm2" V 8350 2500 50  0001 C CNN
+F 1 "47µH" V 8075 2500 50  0000 C CNN
+F 2 "LibreSolar:Inductor_Bourns_SRR1260" V 8350 2500 50  0001 C CNN
 F 3 "" H 8150 2500 50  0001 C CNN
-F 4 "Custom (see schematic)" H 750 450 50  0001 C CNN "Manufacturer"
-F 5 "" H 8150 2500 60  0001 C CNN "Supplier"
+F 4 "Bourns" H 750 450 50  0001 C CNN "Manufacturer"
+F 5 "SRR1260-470M" H 8150 2500 60  0001 C CNN "PartNumber"
 	1    8150 2500
 	0    -1   -1   0   
 $EndComp
@@ -105,8 +105,8 @@ F 1 "560µF" H 4525 2425 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 4525 2275 50  0001 L CNN
 F 3 "" H 4525 2575 50  0000 C CNN
 F 4 "United Chemi-Con" H 1100 700 50  0001 C CNN "Manufacturer"
-F 5 "EKZN101ELL561MM25S" H 1100 700 50  0001 C CNN "PartNumber"
-F 6 "100V, 2.75A, 18x25" H 500 400 60  0001 C CNN "Remarks"
+F 5 "EKZN201ELL561MJ20S" H 1100 700 50  0001 C CNN "PartNumber"
+F 6 "200V, 2.75A, 18x20" H 500 400 60  0001 C CNN "Remarks"
 	1    4500 2500
 	1    0    0    -1  
 $EndComp
@@ -117,12 +117,12 @@ P 9500 3000
 AR Path="/5EBC12A8" Ref="C5"  Part="1" 
 AR Path="/58A68DC9/5EBC12A8" Ref="C5"  Part="1" 
 F 0 "C5" H 9520 3070 50  0000 L CNN
-F 1 "680µF" H 9520 2920 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 9500 3000 50  0001 C CNN
+F 1 "1000µF" H 9520 2920 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 9500 3000 50  0001 C CNN
 F 3 "" H 9500 3000 50  0000 C CNN
 F 4 "Panasonic" H 5700 1200 50  0001 C CNN "Manufacturer"
-F 5 "EEU-FR1V681" H 5700 1200 50  0001 C CNN "PartNumber"
-F 6 "35V, 2.18A, 10x20" H 1500 200 60  0001 C CNN "Remarks"
+F 5 "EKMQ101VSN102MR40S" H 5700 1200 50  0001 C CNN "PartNumber"
+F 6 "100V, 2.0A, 16x40" H 1500 200 60  0001 C CNN "Remarks"
 	1    9500 3000
 	1    0    0    -1  
 $EndComp
@@ -142,15 +142,15 @@ F 7 "" H 500 400 60  0001 C CNN "Alternative"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Project:LM5107 U1
+L Project:IR2104 U1
 U 1 1 5EBC12AF
 P 8700 5500
 F 0 "U1" H 8700 5850 50  0000 C CNN
-F 1 "LM5107" H 8700 5150 50  0000 C CNN
+F 1 "IR2104" H 8700 5150 50  0000 C CNN
 F 2 "LibreSolar:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8750 5500 60  0001 C CNN
 F 3 "" H 8750 5500 60  0001 C CNN
-F 4 "Texas Instruments" H 4500 1450 50  0001 C CNN "Manufacturer"
-F 5 "LM5107MAX/NOPB" H 4500 1450 50  0001 C CNN "PartNumber"
+F 4 "Infineon" H 4500 1450 50  0001 C CNN "Manufacturer"
+F 5 "IR2104STRPBF" H 4500 1450 50  0001 C CNN "PartNumber"
 	1    8700 5500
 	1    0    0    -1  
 $EndComp
@@ -159,13 +159,13 @@ L Device:Q_NMOS_GDS Q1
 U 1 1 58C3E2A8
 P 6900 2100
 F 0 "Q1" H 7100 2150 50  0000 L CNN
-F 1 "IPA045N10N3G" H 7100 2050 50  0000 L CNN
+F 1 "IPP200N25N3G" H 7100 2050 50  0000 L CNN
 F 2 "LibreSolar:TO-220-3_Horizontal_BottomHeatsink" H 7100 2200 50  0001 C CNN
 F 3 "" H 6900 2100 50  0001 C CNN
 F 4 "Infineon" H 900 300 50  0001 C CNN "Manufacturer"
-F 5 "IPA045N10N3G" H 900 300 50  0001 C CNN "PartNumber"
+F 5 "IPP200N25N3G" H 900 300 50  0001 C CNN "PartNumber"
 F 6 "" H 6900 2100 50  0001 C CNN "Alternative"
-F 7 "Alternative: IPP045N10N3G" H 6900 2100 50  0001 C CNN "Remarks"
+F 7 "250V, 34A, 200mΩ, TO-220; parallel pair Q1A||Q1B" H 6900 2100 50  0001 C CNN "Remarks"
 	1    6900 2100
 	1    0    0    -1  
 $EndComp
@@ -174,13 +174,13 @@ L Device:Q_NMOS_GDS Q2
 U 1 1 58C40039
 P 6900 3000
 F 0 "Q2" H 7100 3050 50  0000 L CNN
-F 1 "IPA045N10N3G" H 7100 2950 50  0000 L CNN
+F 1 "IPP200N25N3G" H 7100 2950 50  0000 L CNN
 F 2 "LibreSolar:TO-220-3_Horizontal_BottomHeatsink" H 7100 3100 50  0001 C CNN
 F 3 "" H 6900 3000 50  0001 C CNN
 F 4 "Infineon" H 900 500 50  0001 C CNN "Manufacturer"
-F 5 "IPA045N10N3G" H 900 500 50  0001 C CNN "PartNumber"
+F 5 "IPP200N25N3G" H 900 500 50  0001 C CNN "PartNumber"
 F 6 "" H 6900 3000 50  0001 C CNN "Alternative"
-F 7 "Alternative: IPP045N10N3G" H 6900 3000 50  0001 C CNN "Remarks"
+F 7 "250V, 34A, 200mΩ, TO-220; parallel pair Q2A||Q2B" H 6900 3000 50  0001 C CNN "Remarks"
 	1    6900 3000
 	1    0    0    -1  
 $EndComp
@@ -213,8 +213,8 @@ F 1 "560µF" H 4125 2425 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 4125 2275 50  0001 L CNN
 F 3 "" H 4125 2575 50  0000 C CNN
 F 4 "United Chemi-Con" H 700 700 50  0001 C CNN "Manufacturer"
-F 5 "EKZN101ELL561MM25S" H 700 700 50  0001 C CNN "PartNumber"
-F 6 "100V, 2.75A, 18x25" H 500 400 60  0001 C CNN "Remarks"
+F 5 "EKZN201ELL561MJ20S" H 700 700 50  0001 C CNN "PartNumber"
+F 6 "200V, 2.75A, 18x20" H 500 400 60  0001 C CNN "Remarks"
 	1    4100 2500
 	1    0    0    -1  
 $EndComp
@@ -441,11 +441,11 @@ P 3000 6500
 AR Path="/58E22D17/5D8EDFC0" Ref="R?"  Part="1" 
 AR Path="/58A68DC9/5D8EDFC0" Ref="R17"  Part="1" 
 F 0 "R17" V 2925 6500 50  0000 C CNN
-F 1 "100k" V 3075 6500 50  0000 C CNN
+F 1 "180k" V 3075 6500 50  0000 C CNN
 F 2 "LibreSolar:R_0603_1608" V 2825 6400 50  0001 C CNN
 F 3 "" H 3000 6500 50  0000 C CNN
-F 4 "any" H -3450 1200 50  0001 C CNN "Manufacturer"
-F 5 "" H -3450 1200 50  0001 C CNN "PartNumber"
+F 4 "Yageo" H -3450 1200 50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-07180KL" H -3450 1200 50  0001 C CNN "PartNumber"
 F 6 "1%" H 3000 6500 50  0001 C CNN "Remarks"
 	1    3000 6500
 	1    0    0    -1  
@@ -457,11 +457,11 @@ P 3000 6900
 AR Path="/58E22D17/5D8EDFC8" Ref="R?"  Part="1" 
 AR Path="/58A68DC9/5D8EDFC8" Ref="R18"  Part="1" 
 F 0 "R18" V 2925 6900 50  0000 C CNN
-F 1 "5.6k" V 3075 6900 50  0000 C CNN
+F 1 "10k" V 3075 6900 50  0000 C CNN
 F 2 "LibreSolar:R_0603_1608" V 2825 6800 50  0001 C CNN
 F 3 "" H 3000 6900 50  0000 C CNN
-F 4 "any" H -3450 1100 50  0001 C CNN "Manufacturer"
-F 5 "" H -3450 1100 50  0001 C CNN "PartNumber"
+F 4 "Yageo" H -3450 1100 50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-0710KL" H -3450 1100 50  0001 C CNN "PartNumber"
 F 6 "1%" H 3000 6900 50  0001 C CNN "Remarks"
 	1    3000 6900
 	1    0    0    -1  
@@ -539,11 +539,11 @@ P 1700 5700
 AR Path="/58E22D17/5D8EDFB8" Ref="R?"  Part="1" 
 AR Path="/58A68DC9/5D8EDFB8" Ref="R13"  Part="1" 
 F 0 "R13" V 1625 5700 50  0000 C CNN
-F 1 "100k" V 1775 5700 50  0000 C CNN
+F 1 "470k" V 1775 5700 50  0000 C CNN
 F 2 "LibreSolar:R_0603_1608" V 1525 5600 50  0001 C CNN
 F 3 "" H 1700 5700 50  0000 C CNN
-F 4 "any" H -5950 400 50  0001 C CNN "Manufacturer"
-F 5 "" H -5950 400 50  0001 C CNN "PartNumber"
+F 4 "Yageo" H -5950 400 50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-07470KL" H -5950 400 50  0001 C CNN "PartNumber"
 F 6 "1%" H 1700 5700 50  0001 C CNN "Remarks"
 	1    1700 5700
 	1    0    0    -1  
@@ -555,11 +555,11 @@ P 1700 6100
 AR Path="/58E22D17/5D8EDFB0" Ref="R?"  Part="1" 
 AR Path="/58A68DC9/5D8EDFB0" Ref="R14"  Part="1" 
 F 0 "R14" V 1625 6100 50  0000 C CNN
-F 1 "2.2k" V 1775 6100 50  0000 C CNN
+F 1 "10k" V 1775 6100 50  0000 C CNN
 F 2 "LibreSolar:R_0603_1608" V 1525 6000 50  0001 C CNN
 F 3 "" H 1700 6100 50  0000 C CNN
-F 4 "any" H -5950 300 50  0001 C CNN "Manufacturer"
-F 5 "" H -5950 300 50  0001 C CNN "PartNumber"
+F 4 "Yageo" H -5950 300 50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-0710KL" H -5950 300 50  0001 C CNN "PartNumber"
 F 6 "1%" H 1700 6100 50  0001 C CNN "Remarks"
 	1    1700 6100
 	1    0    0    -1  
@@ -652,9 +652,9 @@ F 0 "C42" H 8525 3075 50  0000 L CNN
 F 1 "0.22µF" H 8525 2925 50  0000 L CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 8500 2800 50  0001 C CNN
 F 3 "" H 8525 3075 50  0001 C CNN
-F 4 "B32529C224J" H 8500 3000 50  0001 C CNN "PartNumber"
-F 5 "EPCOS / TDK" H 8500 3000 50  0001 C CNN "Manufacturer"
-F 6 "Alternative: Kemet MMK5224K63J01L16.5TA18" H 8500 3000 50  0001 C CNN "Remarks"
+F 4 "R463W322050M2M" H 8500 3000 50  0001 C CNN "PartNumber"
+F 5 "WIMA" H 8500 3000 50  0001 C CNN "Manufacturer"
+F 6 "0.22µF, 250V, film" H 8500 3000 50  0001 C CNN "Remarks"
 	1    8500 3000
 	1    0    0    -1  
 $EndComp
@@ -672,11 +672,11 @@ AR Path="/5D78A622/5EBC12C9" Ref="RV?"  Part="1"
 AR Path="/5C5B93EE/5EBC12C9" Ref="RV?"  Part="1" 
 AR Path="/58A68DC9/5EBC12C9" Ref="RV2"  Part="1" 
 F 0 "RV2" H 1803 2296 50  0000 L CNN
-F 1 "82V" H 1803 2205 50  0000 L CNN
+F 1 "150V" H 1803 2205 50  0000 L CNN
 F 2 "Varistor:RV_Disc_D12mm_W4.3mm_P7.5mm" V 1630 2250 50  0001 C CNN
 F 3 "" H 1700 2250 50  0001 C CNN
-F 4 "Bourns" H 1700 2250 50  0001 C CNN "Manufacturer"
-F 5 "MOV-10D820K " H 1700 2250 50  0001 C CNN "PartNumber"
+F 4 "Littelfuse" H 1700 2250 50  0001 C CNN "Manufacturer"
+F 5 "V150LA20AP" H 1700 2250 50  0001 C CNN "PartNumber"
 	1    1700 2250
 	1    0    0    -1  
 $EndComp
@@ -813,9 +813,9 @@ F 0 "C44" H 9075 2925 50  0000 R CNN
 F 1 "0.22µF" H 9075 3075 50  0000 R CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 9100 2800 50  0001 C CNN
 F 3 "" H 9125 3075 50  0001 C CNN
-F 4 "B32529C224J" H 9100 3000 50  0001 C CNN "PartNumber"
-F 5 "EPCOS / TDK" H 9100 3000 50  0001 C CNN "Manufacturer"
-F 6 "Alternative: Kemet MMK5224K63J01L16.5TA18" H 9100 3000 50  0001 C CNN "Remarks"
+F 4 "R463W322050M2M" H 9100 3000 50  0001 C CNN "PartNumber"
+F 5 "WIMA" H 9100 3000 50  0001 C CNN "Manufacturer"
+F 6 "0.22µF, 250V, film" H 9100 3000 50  0001 C CNN "Remarks"
 	1    9100 3000
 	-1   0    0    1   
 $EndComp
@@ -1287,12 +1287,12 @@ P 9900 3000
 AR Path="/5FFA2979" Ref="C27"  Part="1" 
 AR Path="/58A68DC9/5FFA2979" Ref="C27"  Part="1" 
 F 0 "C27" H 9920 3070 50  0000 L CNN
-F 1 "680µF" H 9920 2920 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 9900 3000 50  0001 C CNN
+F 1 "1000µF" H 9920 2920 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 9900 3000 50  0001 C CNN
 F 3 "" H 9900 3000 50  0000 C CNN
 F 4 "Panasonic" H 6100 1200 50  0001 C CNN "Manufacturer"
-F 5 "EEU-FR1V681" H 6100 1200 50  0001 C CNN "PartNumber"
-F 6 "35V, 2.18A, 10x20" H 1900 200 60  0001 C CNN "Remarks"
+F 5 "EKMQ101VSN102MR40S" H 6100 1200 50  0001 C CNN "PartNumber"
+F 6 "100V, 2.0A, 16x40" H 1900 200 60  0001 C CNN "Remarks"
 	1    9900 3000
 	1    0    0    -1  
 $EndComp
@@ -1372,5 +1372,5 @@ Connection ~ 8100 5500
 Wire Wire Line
 	8100 5500 7900 5500
 Text Notes 7600 1300 0    50   ~ 0
-Main inductor L1 layout:\n- Core: 2x stacked MS-130060-2 (Sendust 60µ, OD 33 mm, AL 61 nH/T²)\n- Winding: 21 turns, 40 strands x AWG 27 (D 0.355 mm), 4 mm² total
+Inductor L1 (Bourns SRR1260-470M):\n- 47µH, 50A saturation, 1.8mΩ DCR\n- 12.7×12.7×6mm SMD package\n- High-side MOSFETs Q1, Q2: 2× IPP200N25N3G per position (Q1A||Q1B, Q2A||Q2B)\n- Low-side sync MOSFETs Q4, Q5, Q6: 3× IPP200N25N3G in parallel\n- Gate driver U1: IR2104 half-bridge with bootstrap; 500ns dead-time
 $EndSCHEMATC
