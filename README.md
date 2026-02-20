@@ -2,11 +2,11 @@
 
 ![Development Stage](https://img.shields.io/badge/development%20stage-beta-orange.svg) Prototype built and tested, development ongoing (some issues might still be open).
 
-![MPPT 2420 HC](build/mppt-2420-hc_board.jpg)
+![MPPT 4820 HC](build/mppt-4820-hc_board.jpg)
 
-Schematic: [PDF file](build/mppt-2420-hc_schematic.pdf)
+Schematic: [PDF file](build/mppt-4820-hc_schematic.pdf)
 
-Bill of Materials: [CSV file](build/mppt-2420-hc_bom_(hv_supply,can).csv) or [interactive HTML BOM](https://libre.solar/mppt-2420-hc/build/mppt-2420-hc_ibom.html)
+Bill of Materials: [CSV file](build/mppt-4820-hc_bom_(hv_supply,can).csv) or [interactive HTML BOM](https://libre.solar/mppt-4820-hc/build/mppt-4820-hc_ibom.html)
 
 Firmware repository: [LibreSolar/charge-controller-firmware](https://github.com/LibreSolar/charge-controller-firmware)
 
