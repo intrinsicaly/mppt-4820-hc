@@ -1,6 +1,6 @@
 /*
  * Synchronous Buck Converter Control for MPPT-4820-HC
- * 48V/20A (1kW) MPPT Charge Controller
+ * 48V/21A (1kW) MPPT Charge Controller
  *
  * Features:
  * - Complementary PWM with hardware dead-time
@@ -14,11 +14,11 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-/* Configuration for 48V/20A operation */
+/* Configuration for 48V/21A operation */
 #define PV_VOLTAGE_MAX              140.0f  /* Solar input max (V) */
 #define BATTERY_VOLTAGE_NOMINAL     48.0f   /* 48V system */
 #define BATTERY_VOLTAGE_MAX         58.4f   /* 14.6V/cell × 4 */
-#define BATTERY_CURRENT_MAX         20.0f   /* Charge current limit (A) */
+#define BATTERY_CURRENT_MAX         21.0f   /* Charge current limit (A) — 48V mode */
 
 /*
  * For 24V/42A operation (alternative):
@@ -28,8 +28,8 @@
  */
 
 /* ADC scaling for new voltage dividers */
-#define VPV_ADC_SCALE               48.0f   /* (470k + 10k) / 10k */
-#define VBAT_ADC_SCALE_48V          19.0f   /* (180k + 10k) / 10k */
+#define VPV_ADC_SCALE               50.9f   /* (2×499k + 20k) / 20k */
+#define VBAT_ADC_SCALE_48V          17.9f   /* (169k + 10k) / 10k */
 #define VBAT_ADC_SCALE_24V          9.2f    /* (82k + 10k) / 10k */
 
 /* Current sense scaling (1mΩ resistor, 50× gain) */
