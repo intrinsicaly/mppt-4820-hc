@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 3 6
 Title "MPPT 4820 HC"
 Date "2021-01-06"
-Rev "0.2.3"
+Rev "2.0"
 Comp "Copyright © 2020 Libre Solar Technologies GmbH"
 Comment1 "Licensed under CERN-OHL-W version 2"
 Comment2 "Author: Martin Jäger"
@@ -179,15 +179,15 @@ F 7 "Alternative: Bourns SRR6045TA-470Y" H 8450 2100 50  0001 C CNN "Remarks"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Project:LMR16006 U4
+L Project:LMR16030 U4
 U 1 1 58BDBD3F
 P 7100 2100
 F 0 "U4" H 7100 2450 50  0000 C CNN
-F 1 "LMR16006X" H 7100 1750 50  0000 C CNN
+F 1 "LMR16030X" H 7100 1750 50  0000 C CNN
 F 2 "LibreSolar:SOT-23-6" H 7100 1650 50  0001 C CNN
 F 3 "" H 6700 2500 50  0000 C CNN
 F 4 "Texas Instruments" H 3200 -250 50  0001 C CNN "Manufacturer"
-F 5 "LMR16006XDDCR" H 3200 -250 50  0001 C CNN "PartNumber"
+F 5 "LMR16030XDDCR" H 3200 -250 50  0001 C CNN "PartNumber"
 F 6 "" H 7100 2100 60  0001 C CNN "Alternative"
 	1    7100 2100
 	1    0    0    -1  

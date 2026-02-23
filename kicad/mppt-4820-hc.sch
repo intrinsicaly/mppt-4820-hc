@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 6
 Title "MPPT 4820 HC"
 Date "2021-01-06"
-Rev "0.2.3"
+Rev "2.0"
 Comp "Copyright © 2020 Libre Solar Technologies GmbH"
 Comment1 "Licensed under CERN-OHL-W version 2"
 Comment2 "Author: Martin Jäger"
@@ -287,9 +287,9 @@ Wire Wire Line
 Text Label 7100 4500 2    50   ~ 0
 PWR_INFO
 Text Notes 2000 2150 2    80   ~ 0
-MPPT: 60V 10A
+PV input: 15-140V, max 30A
 Text Notes 9300 2150 0    80   ~ 0
-Battery: 12V/24V 20A
+Battery: 24V/48V, 42A/21A, 1kW
 Text Notes 9300 3550 0    80   ~ 0
 Load output: 20A
 $Comp
