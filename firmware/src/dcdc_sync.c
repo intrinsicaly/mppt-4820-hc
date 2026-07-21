@@ -139,7 +139,7 @@ bool is_dcm_mode(void)
                  (float)(htim1.Init.Period + 1U);
 
     /* ΔI_L = (V_in − V_out) × D / (L × f_sw) */
-    const float L   = 4.7e-6f;  /* 4.7µH (Würth 7443730470) */
+    const float L   = 4.7e-6f;  /* Matches dcdc.sch L1 (Würth 7443730470, 4.7µH) */
     const float f_sw = (float)PWM_FREQUENCY;
     float i_ripple  = (v_solar - v_battery) * duty / (L * f_sw);
 

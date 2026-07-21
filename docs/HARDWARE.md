@@ -220,7 +220,7 @@ build/
 └── mppt-4820-hc_board.jpg         # Board render
 ```
 
-> Note: `build/` artifacts are snapshots and may lag behind schematic updates. For design reviews, use the current KiCad source in `/home/runner/work/mppt-4820-hc/mppt-4820-hc/kicad` and regenerate outputs before manufacturing.
+> Note: `build/` artifacts are snapshots and may lag behind schematic updates. For design reviews, use the current KiCad source in `kicad/` and regenerate outputs before manufacturing.
 
 ## Working with the Project
 

@@ -30,7 +30,7 @@ This charge controller design is the replacement for the MPPT 2420 LC. We are al
 ## Current design baseline
 
 - The 24V/48V, 1kW hardware baseline is documented in `docs/HARDWARE_UPGRADE_1KW.md`.
-- Source of truth for electrical design is the KiCad schematics in `/home/runner/work/mppt-4820-hc/mppt-4820-hc/kicad`.
+- Source of truth for electrical design is the KiCad schematics in `kicad/`.
 - `build/` outputs (PDF/BOM/render) should be regenerated from current schematics before release or manufacturing decisions.
 
 ## Mechanical design
