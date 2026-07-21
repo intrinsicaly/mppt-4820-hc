@@ -1,6 +1,6 @@
 /*
  * ADC Scaling Constants for MPPT-4820-HC
- * 48V/21A (1kW) MPPT Charge Controller
+ * 24V/48V (1kW class) MPPT Charge Controller
  *
  * Voltage divider values (all 0603, 1%):
  *   Solar input:   R13 = 499kΩ, R13b = 499kΩ (series), R14 = 20kΩ → ratio 50.9 (max 168V → 3.26V ADC)

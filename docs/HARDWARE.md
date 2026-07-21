@@ -4,11 +4,12 @@
 
 The MPPT 4820 HC is a Maximum Power Point Tracking (MPPT) solar charge controller with high current capability. This document describes the hardware design files and project structure.
 
-**Key Specifications:**
-- Solar Input: Up to 80V (100V rated MOSFETs)
-- DC/DC Converter: 20A inductor current capability
-- Battery Output: 10V - 32V (12V/24V systems)
-- Maximum Current: 20A
+**Key Specifications (current baseline):**
+- Solar Input: 15V to 140V (140V max open-circuit)
+- DC/DC Converter: 24V/48V battery charging
+- Battery Output: 24V / 48V systems
+- Maximum Current: 42A (24V mode), 21A (48V mode)
+- Maximum Output Power: 1kW
 - Load Output: 20A switching capability
 - MCU: STM32G431 ARM Cortex-M4
 - Communication: CAN bus via RJ45 connectors
@@ -16,7 +17,7 @@ The MPPT 4820 HC is a Maximum Power Point Tracking (MPPT) solar charge controlle
 
 ## Project Status
 
-**Status:** Prototype built and tested, development ongoing
+**Status:** Hardware upgrade baseline defined for 24V/48V operation (see `docs/HARDWARE_UPGRADE_1KW.md`); validation and release harmonization ongoing.
 
 ## Directory Structure
 
@@ -51,7 +52,7 @@ The design uses a hierarchical structure with 6 sheets:
 **Purpose:** Main power conversion stage
 
 **Key Components:**
-- High-side and low-side MOSFETs (100V rated)
+- High-side and low-side MOSFETs for 24V/48V, 1kW operation
 - Power inductor (high current capability)
 - Input/output filtering capacitors
 - Current sensing circuitry
@@ -68,8 +69,8 @@ The design uses a hierarchical structure with 6 sheets:
 **Purpose:** Generate low-voltage rails for control circuits
 
 **Features:**
-- Buck converter from battery voltage
-- Multiple voltage rails (likely 3.3V, 5V)
+- Buck converter from battery/high-voltage side
+- Multiple voltage rails (3.3V, 5V, and gate-driver supply)
 - Charge pump for high-side gate drive
 - Protection and filtering
 
@@ -128,7 +129,7 @@ Contains project-specific components including:
 - 24AA01 (I2C EEPROM)
 - AP2210-3.3 (LDO regulator)
 - AZ1117 (voltage regulator)
-- LMR16006 (buck converter)
+- LMR16030 (buck converter)
 - TCAN334 (CAN transceiver)
 
 **Passive Components:**
@@ -170,8 +171,8 @@ Contains project-specific components including:
 
 Key components require specific attention:
 
-1. **MOSFETs:** 100V rated, low Rds(on)
-2. **Inductor:** High current (20A+), low DCR
+1. **MOSFETs:** High-voltage/high-current parts sized for 24V/48V, 1kW operation
+2. **Inductor:** High current (50A peak class), low DCR
 3. **MCU:** STM32G431 (specific package)
 4. **CAN Transceiver:** TCAN334 or compatible
 
@@ -218,6 +219,8 @@ build/
 ├── mppt-4820-hc_ibom.html         # Interactive BOM
 └── mppt-4820-hc_board.jpg         # Board render
 ```
+
+> Note: `build/` artifacts are snapshots and may lag behind schematic updates. For design reviews, use the current KiCad source in `kicad/` and regenerate outputs before manufacturing.
 
 ## Working with the Project
 
@@ -299,10 +302,7 @@ Base configuration without optional features
 
 ## Revision History
 
-- **v0.2.3** (2021-05-03): Current revision
-  - Schematic updates
-  - Component value optimizations
-
+- **v1.0.0** (2026-02-20): 24V/48V hardware baseline updates (1kW design direction)
 - Earlier versions documented in git history
 
 ## Design Notes

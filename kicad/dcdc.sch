@@ -1372,5 +1372,5 @@ Connection ~ 8100 5500
 Wire Wire Line
 	8100 5500 7900 5500
 Text Notes 7600 1300 0    50   ~ 0
-Inductor L1 (Würth 7443730470):\n- 4.7µH, 50A saturation, 2.4mΩ DCR\n- 22.5×22.5×19.5mm radial through-hole\n- High-side MOSFET Q1: IPW60R041P6 (650V, 38A, 41mΩ, TO-247)\n- Low-side MOSFET Q2: IPT015N10N5 (100V, 100A, 1.5mΩ, TO-220)\n- Gate driver U1: UCC27712 half-bridge, 150V bootstrap; 500ns dead-time
+Inductor L1 (Würth 7443730470):\n- 4.7µH, 50A saturation, 2.4mΩ DCR\n- 22.5×22.5×19.5mm radial through-hole\n- High-side MOSFET Q1: IPW60R041P6 (650V, 38A, 41mΩ, TO-247)\n- Low-side MOSFET Q2: IPT015N10N5 (100V, 100A, 1.5mΩ, TO-220)\n- Gate driver U1: UCC27712 half-bridge, 150V bootstrap; 500ns dead-time\n- Firmware DCM model uses L = 4.7µH to match this schematic
 $EndSCHEMATC
