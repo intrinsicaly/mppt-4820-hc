@@ -37,7 +37,7 @@
 #define CURRENT_SENSE_RESISTOR      0.001f  /* 1mΩ */
 
 /* PWM configuration */
-#define PWM_FREQUENCY               80000   /* 80kHz */
+#define PWM_FREQUENCY               50000   /* 50kHz */
 #define PWM_DEAD_TIME_NS            500     /* 500ns dead-time */
 #define PWM_DUTY_MAX                0.95f   /* 95% max duty cycle */
 #define PWM_DUTY_MIN                0.05f   /* 5% min duty cycle */
