@@ -2,10 +2,10 @@
  * Synchronous Buck Converter Implementation for MPPT-4820-HC
  *
  * Configures STM32G4 TIM1 for complementary PWM with hardware dead-time
- * to drive the IR2104 half-bridge gate driver.
+ * to drive the UCC27712 half-bridge gate driver.
  *
- * High-side:  TIM1_CH1  → IR2104 HIN → Q1A, Q1B (IPP200N25N3G × 2)
- * Low-side:   TIM1_CH1N → IR2104 LIN → Q4, Q5, Q6 (IPP200N25N3G × 3)
+ * High-side:  TIM1_CH1  → UCC27712 HIN → Q1 (IPW60R041P6)
+ * Low-side:   TIM1_CH1N → UCC27712 LIN → Q2 (IPT015N10N5)
  */
 
 #include "dcdc_sync.h"
@@ -139,7 +139,7 @@ bool is_dcm_mode(void)
                  (float)(htim1.Init.Period + 1U);
 
     /* ΔI_L = (V_in − V_out) × D / (L × f_sw) */
-    const float L   = 47e-6f;  /* 47µH (Bourns SRR1260-470M) */
+    const float L   = 4.7e-6f;  /* 4.7µH (Würth 7443730470) */
     const float f_sw = (float)PWM_FREQUENCY;
     float i_ripple  = (v_solar - v_battery) * duty / (L * f_sw);
 

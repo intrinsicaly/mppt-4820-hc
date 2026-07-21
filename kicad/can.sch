@@ -238,7 +238,7 @@ Wire Wire Line
 	6900 3300 7200 3300
 Connection ~ 6900 2900
 Text Notes 8000 5100 0    50   ~ 0
-CAN bus power supply\n- 10V-32V\n- 600 mA (like PoE)\n\nDiodes necessary to prevent\nseparate GND loops.\n\nPolyfuse to prevent \nover-current in daisy-chained \nbus with multiple sources and \nsinks.
+CAN bus power supply\n- 24V-58V\n- 600 mA (like PoE)\n\nDiodes necessary to prevent\nseparate GND loops.\n\nPolyfuse to prevent \nover-current in daisy-chained \nbus with multiple sources and \nsinks.
 Text HLabel 7600 2900 2    50   Output ~ 0
 CAN_PWR1
 Text HLabel 7600 3300 2    50   Output ~ 0

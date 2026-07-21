@@ -1,6 +1,6 @@
 # MPPT charge controller with HS load switch and CAN
 
-![Development Stage](https://img.shields.io/badge/development%20stage-beta-orange.svg) Prototype built and tested, development ongoing (some issues might still be open).
+![Development Stage](https://img.shields.io/badge/development%20stage-beta-orange.svg) Development ongoing.
 
 ![MPPT 4820 HC](build/mppt-4820-hc_board.jpg)
 
@@ -15,16 +15,23 @@ This charge controller design is the replacement for the MPPT 2420 LC. We are al
 ## Features
 
 - Solar input terminal
-    - Max. 80V (100V MOSFETs used)
-    - DC/DC converter inductor current max. 20A
+    - 15V to 140V operating range
+    - 140V maximum open-circuit input
 - Battery output terminal
-    - 10 V - 32 V (supporting 12 V and 24 V battery systems)
-    - Max. current: 20A (limited by inductor current)
+    - 24V / 48V systems
+    - Up to 42A @ 24V mode, up to 21A @ 48V mode
+    - Up to 1kW output power
 - Load terminal: 20A
 - New STM32G431 ARM MCU with advanced digital power conversion features
 - Expandable via Olimex Universal Extension Connector (UEXT)
 - Two bi-color (red/green) LEDs for status indication. Additional user interface can be included in separate PCB in front panel housing and connected via UEXT
 - CAN interface via RJ45 connectors
+
+## Current design baseline
+
+- The 24V/48V, 1kW hardware baseline is documented in `docs/HARDWARE_UPGRADE_1KW.md`.
+- Source of truth for electrical design is the KiCad schematics in `/home/runner/work/mppt-4820-hc/mppt-4820-hc/kicad`.
+- `build/` outputs (PDF/BOM/render) should be regenerated from current schematics before release or manufacturing decisions.
 
 ## Mechanical design
 

@@ -1,4 +1,5 @@
 Component,References,Value,Footprint,Description,Quantity Per PCB,Manufacturer,PartNumber,Remarks,Config
+0,NOTE,LEGACY_SNAPSHOT,NA,"This BOM snapshot may be stale. Regenerate from current KiCad schematics before purchasing/manufacturing.",1,,,,,
 1,C11 C15,1nF,C_0603_1608,Unpolarized capacitor,2,any,,,
 2,C6,2.2nF,C_0603_1608,Unpolarized capacitor,1,any,,"100V, C0G",
 3,C8 C14 C16 C17 C25 C26 C34 C37 C45,10nF,C_0603_1608,Unpolarized capacitor,9,any,,"100V, X7R",
@@ -12,7 +13,7 @@ Component,References,Value,Footprint,Description,Quantity Per PCB,Manufacturer,P
 11,C19,4.7µF,C_1210_3225,Unpolarized capacitor,1,Murata,GRJ32DC72A475KE11L,"100V, X7S",
 12,C41,4.7µF,C_0603_1608,Unpolarized capacitor,1,Wurth Electronics,885012107018,"25V, X5R",
 13,C1 C2,560µF,CP_Radial_D18.0mm_P7.50mm,Polarized capacitor,2,United Chemi-Con,EKZN101ELL561MM25S,"100V, 2.75A, 18x25",
-14,C5 C27,680µF,CP_Radial_D10.0mm_P5.00mm,Polarized capacitor,2,Panasonic,EEU-FR1V681,"35V, 2.18A, 10x20",
+14,C5 C27,680µF,CP_Radial_D18.0mm_P7.50mm,Polarized capacitor,2,Panasonic,EEEFK1J681P,"63V, 3.97A, 18x20",
 15,D3 D5,12V,D_SOT-23_ANK,Diode zener,2,ON Semiconductor,SZBZX84C12LT3G,Alternative: Diodes Inc. BZX84C12-7-F,
 16,D10 D16,1N4148,D_SOD-123,Diode,2,Diodes Inc.,1N4148W-7-F,,
 17,D9,47V,D_SOT-23_ANK,Diode zener,1,ON Semiconductor,SZBZX84C47LT1G,Alternative: Diodes Inc. BZX84C47-7-F,+hv_supply
@@ -29,12 +30,12 @@ Component,References,Value,Footprint,Description,Quantity Per PCB,Manufacturer,P
 28,JP1,Jumper_NC_Small,PinHeader_1x02_P2.54mm_Vertical,Jumper normally close,1,,,,+can
 29,L2,4.7µH,L_0805_2012Metric,"Inductor, small symbol",1,Murata,LQM21PN4R7NGRD,,
 30,L3,47µH,Bourns_SRN6045TA,"Inductor, small symbol",1,Tayo Yuden,NR6045T470M,Alternative: Bourns SRR6045TA-470Y,
-31,L1,53µH,Inductor_Toroid_D32.8mm_4mm2,Inductor,1,Custom (see schematic),,,
+31,L1,4.7µH,Inductor_Wuerth_7443730470,Inductor,1,Würth Elektronik,7443730470,"50A saturation, 2.4mΩ DCR",
 32,LED1 LED2,LED_Dual_PLCC4,LED_Avago_PLCC4_3.2x2.8mm_CW,"Dual LED, cathodes on pins 1 and 3",2,Lite-On,LTST-E682KRKGWT,Alternative: Vishay VLMKG3400-GS08,
 33,P1,CONN_01X02,PinHeader_1x02_P2.54mm_Vertical,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",1,any,"Pin header 1x5, 2.54mm pitch",,
 34,Q4,BUK98180-100A,SOT-223-3_TabPin2,"N-MOSFET transistor, gate/drain/source",1,Nexperia,BUK98180-100A/CUX,Alternative: Fairchild FQT7N10LTF,+hv_supply
-35,Q1 Q2 Q3 Q7,IPA045N10N3G,TO-220-3_Horizontal_BottomHeatsink,"N-MOSFET transistor, gate/drain/source",4,Infineon,IPA045N10N3G,Alternative: IPP045N10N3G,
-36,R6 R62,2m,R_Bourns_CRE2512,Resistor,2,Bourns,CRE2512-FZ-R002E-3,,
+35,Q1 Q2 Q3 Q7,MIXED (see schematic),Mixed footprints,"N-MOSFET transistor, gate/drain/source",4,Mixed,See schematic,"Q1=IPW60R041P6, Q2=IPT015N10N5, Q3/Q7=IPA045N10N3G",
+36,R6 R62,MIXED (1m/2m),R_Bourns_CRE2512,Resistor,2,Bourns,See schematic,"R6=CRE2512-FZ-R001E-3, R62=CRE2512-FZ-R002E-3",
 37,R1 R2 R3 R5,3R3,R_0805_2012,Resistor,4,Yageo,RC0805FR-073R3L,,
 38,R4 R12,4R7,R_1206_3216,Resistor,2,Yageo,RC1206FR-074R7L,,
 39,R8 R9,10R,R_0603_1608,Resistor,2,any,,1%,
@@ -53,9 +54,9 @@ Component,References,Value,Footprint,Description,Quantity Per PCB,Manufacturer,P
 52,SWD1,ST_Nucleo_SWD,PinHeader_1x05_P2.54mm_Vertical,STM32 Nucleo Board SWD connector (5 pins w/o SWO),1,any,"Pin header 1x5, 2.54mm pitch",,
 53,T1 T2 T3 T5 T10,BC846B,SOT-23,"0.1A Ic, 65V Vce, NPN Transistor, SOT-23",5,ON Semiconductor,BC846BLT1G,,+hv_supply
 54,T4,BC856B,SOT-23,"0.1A Ic, 65V Vce, PNP Transistor, SOT-23",1,ON Semiconductor,BC856BLT1G,,
-55,U3 U5,INA186,SOT-363_SC-70-6,"Bidirectional, Low- and High-Side Voltage Output, Current-Sense Amplifier, SC-70",2,Texas Instruments,INA186A1IDCKR,,
-56,U1,LM5107,SOIC-8_3.9x4.9mm_Pitch1.27mm,,1,Texas Instruments,LM5107MAX/NOPB,,
-57,U4,LMR16006X,SOT-23-6,"SIMPLE SWITCHER® 4V to 60V, 600mA Step-Down Regulator with Low Iq",1,Texas Instruments,LMR16006XDDCR,,
+55,U3 U5,MIXED,SC-70-6 / SC-70-5,"Current-sense amplifiers",2,Texas Instruments,See schematic,"U3=INA240A3DCNR, U5=INA186A1IDCKR",
+56,U1,UCC27712,SOIC-8_3.9x4.9mm_Pitch1.27mm,High-side/low-side gate driver,1,Texas Instruments,UCC27712DR,,
+57,U4,LMR16030X,SOT-23-6,"SIMPLE SWITCHER® 4V to 60V, 600mA Step-Down Regulator with Low Iq",1,Texas Instruments,LMR16030XDDCR,,
 58,U2,STM32G431CBTx,LQFP-48_7x7mm_P0.5mm,"ARM Cortex-M4 MCU, 128KB flash, 22KB RAM, 170MHz, 1.71-3.6V, 66 GPIO, LQFP-48",1,ST Microelectronics,STM32G431CBT6,,
 59,U7,TCAN334,SOIC-8_3.9x4.9mm_Pitch1.27mm,"High-Speed CAN Transceiver, 1Mbps, 3.3V supply, low power standby mode, shutdown mode, SOT-23-8/SOIC-8",1,Texas Instruments,TCAN334DR,,+can
 60,U6,W25Q80DVS,SOIC-8_3.9x4.9mm_Pitch1.27mm,"128Mb Serial Flash Memory, Standard/Dual/Quad SPI, SOIC-8",1,Winbond,W25Q80DVSNIG,,

@@ -1,6 +1,6 @@
 /*
  * MPPT Control Loop for MPPT-4820-HC
- * 48V/20A (1kW) MPPT Charge Controller
+ * 24V/48V (1kW class) MPPT Charge Controller
  *
  * Integrates synchronous buck converter control with the MPPT algorithm.
  * Firmware companion to LibreSolar/charge-controller-firmware.
