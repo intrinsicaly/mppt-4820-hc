@@ -1,3 +1,4 @@
 (fp_lib_table
-  (lib (name LibreSolar_github)(type Github)(uri https://github.com/LibreSolar/kicad-footprints)(options "")(descr "LibreSolar common footprints library"))
+  (lib (name Project)(type KiCad)(uri ${KIPRJMOD}/Project.pretty)(options "")(descr "Project-specific PCB footprints"))
+  (lib (name LibreSolar)(type Github)(uri https://github.com/LibreSolar/kicad-footprints)(options "")(descr "LibreSolar common footprints library"))
 )
