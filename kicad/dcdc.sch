@@ -73,7 +73,7 @@ AR Path="/58ACD441" Ref="L1"  Part="1"
 AR Path="/58A68DC9/58ACD441" Ref="L1"  Part="1" 
 F 0 "L1" V 8250 2500 50  0000 C CNN
 F 1 "4.7µH" V 8075 2500 50  0000 C CNN
-F 2 "LibreSolar:Inductor_Wuerth_7443730470" V 8350 2500 50  0001 C CNN
+F 2 "Project:Inductor_4p7uH_HighCurrent_ToroidPad" V 8350 2500 50  0001 C CNN
 F 3 "" H 8150 2500 50  0001 C CNN
 F 4 "Würth Elektronik" H 750 450 50  0001 C CNN "Manufacturer"
 F 5 "7443730470" H 8150 2500 60  0001 C CNN "PartNumber"
@@ -102,7 +102,7 @@ AR Path="/58A857B0" Ref="C2"  Part="1"
 AR Path="/58A68DC9/58A857B0" Ref="C2"  Part="1" 
 F 0 "C2" H 4525 2575 50  0000 L CNN
 F 1 "100µF" H 4525 2425 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 4525 2275 50  0001 L CNN
+F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 4525 2275 50  0001 L CNN
 F 3 "" H 4525 2575 50  0000 C CNN
 F 4 "Nichicon" H 1100 700 50  0001 C CNN "Manufacturer"
 F 5 "UHE2C101MED" H 1100 700 50  0001 C CNN "PartNumber"
@@ -118,7 +118,7 @@ AR Path="/5EBC12A8" Ref="C5"  Part="1"
 AR Path="/58A68DC9/5EBC12A8" Ref="C5"  Part="1" 
 F 0 "C5" H 9520 3070 50  0000 L CNN
 F 1 "680µF" H 9520 2920 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 9500 3000 50  0001 C CNN
+F 2 "Project:CP_Radial_D18.0mm_P5.00mm_Adapted" H 9500 3000 50  0001 C CNN
 F 3 "" H 9500 3000 50  0000 C CNN
 F 4 "Panasonic" H 5700 1200 50  0001 C CNN "Manufacturer"
 F 5 "EEEFK1J681P" H 5700 1200 50  0001 C CNN "PartNumber"
@@ -160,7 +160,7 @@ U 1 1 58C3E2A8
 P 6900 2100
 F 0 "Q1" H 7100 2150 50  0000 L CNN
 F 1 "IPW60R041P6" H 7100 2050 50  0000 L CNN
-F 2 "LibreSolar:TO-247-3_Horizontal_BottomHeatsink" H 7100 2200 50  0001 C CNN
+F 2 "Project:TO-247-3_Horizontal_BottomHeatsink_Adapted" H 7100 2200 50  0001 C CNN
 F 3 "" H 6900 2100 50  0001 C CNN
 F 4 "Infineon" H 900 300 50  0001 C CNN "Manufacturer"
 F 5 "IPW60R041P6" H 900 300 50  0001 C CNN "PartNumber"
@@ -1288,7 +1288,7 @@ AR Path="/5FFA2979" Ref="C27"  Part="1"
 AR Path="/58A68DC9/5FFA2979" Ref="C27"  Part="1" 
 F 0 "C27" H 9920 3070 50  0000 L CNN
 F 1 "680µF" H 9920 2920 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 9900 3000 50  0001 C CNN
+F 2 "Project:CP_Radial_D18.0mm_P5.00mm_Adapted" H 9900 3000 50  0001 C CNN
 F 3 "" H 9900 3000 50  0000 C CNN
 F 4 "Panasonic" H 6100 1200 50  0001 C CNN "Manufacturer"
 F 5 "EEEFK1J681P" H 6100 1200 50  0001 C CNN "PartNumber"
